@@ -1,13 +1,5 @@
 const list_itemsz = [
   {
-    id: "Index",
-    name: "Name",
-    gender: "Gender",
-    age: "Age",
-    state: "State",
-    city: "City"
-  },
-  {
     id: 0,
     name: "Ramsey Cummings",
     gender: "male",
@@ -690,13 +682,12 @@ var jsaccordion = {
 
       // Attach onclick event to headers
       if (single) {
-        for (let i = 0; i < headers.length; i++) {
-          if (i !== 0)
-            headers[i].addEventListener("click", jsaccordion.sselect);
-        }
+        for (let head of headers) {
+          head.addEventListener("click", jsaccordion.sselect);
+         }
       } else {
-        for (let i = 0; i < headers.length; i++) {
-          if (i !== 0) headers[i].addEventListener("click", jsaccordion.select);
+        for (let head of headers) {
+         head.addEventListener("click", jsaccordion.select);
         }
       }
     }

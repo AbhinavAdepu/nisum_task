@@ -47,10 +47,43 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.accordion-head:first-child i.arrow {
+main .list1 {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+main .list1 .accordion-head1 {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 1em 1.5em;
+  font-size: 1.5em;
+  transition: background-color 0.2s linear;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .list1 .accordion-head1:not(:first-child) {
+  cursor: pointer;
+}
+
+main .list .accordion-head1:last-of-type {
+  border-bottom: none;
+}
+main .list1 .accordion-head1 .arrow {
   visibility: hidden;
 }
-.accordion-head:first-child table tr td {
+
+.accordion-head1:first-child i.arrow {
+  visibility: hidden;
+}
+.accordion-head1:first-child table tr td {
   font-size: 12px;
   text-align: center;
   opacity: 0.6;
@@ -59,7 +92,6 @@ main .list {
   width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
-  margin-top: 25px;
 }
 
 main .list .accordion-head {
@@ -77,13 +109,7 @@ main .list .accordion-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-main .list .accordion-head:not(:first-child) {
   cursor: pointer;
-}
-
-main .list .accordion-head:last-of-type {
-  border-bottom: none;
 }
 main .list .accordion-head .arrow {
   border: solid #000;
